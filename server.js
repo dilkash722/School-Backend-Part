@@ -14,6 +14,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root Route
+app.get("/", (req, res) => {
+  res.send("Running Server...");
+});
+
 // Routes
 app.use("/api/admission", admissionRoutes);
 app.use("/api/registration", registrationRoutes);
